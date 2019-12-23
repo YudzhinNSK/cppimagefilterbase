@@ -5,6 +5,7 @@
 #include "ReadConf.h"
 #include "FiltersFather.h"
 #include "AllFilters.h"
+using namespace std;
 
 int main(int argc, char* argv[])
 {
