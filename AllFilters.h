@@ -1,6 +1,7 @@
 #pragma once
 #include "FiltersFather.h"
 #include <algorithm>
+#include <cstring>
 
 void FiltersFather::BW(image_data&, int u, int l, int b, int r) {
 	int curpix;
