@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
 			throw "Not enough arguments";
 
 		png_toolkit studTool;
-		studTool.load(arg[2]);
+		studTool.load(argv[2]);
 		vector<vector<string>> conf = Config::readConfig(argv[1]);
 		conf.reserve(conf.size());
 		image_data imd = studTool.getPixelData();
