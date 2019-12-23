@@ -11,6 +11,7 @@ vector<vector<string>> Config::readConfig(string path) {
 	vector<string> FiltersData;
 	ifstream inputData(path);
 	if (inputData.is_open()) {
+		std::cout<<"I CAN READ CONFIG"<<std::endl;
 		while (getline(inputData, str)) {
 			istringstream ss(str);
 			while (ss) {
