@@ -18,21 +18,25 @@ int main(int argc, char* argv[])
 		png_toolkit studTool;
 		studTool.load(argv[2]);
 		vector<vector<string>> conf = Config::readConfig(argv[1]);
-		//conf.reserve(conf.size());
+		conf.reserve(conf.size());
 		image_data imd = studTool.getPixelData();
 		int i = 0;
 		for (const vector<string>& temp : conf) {
 			if (temp[i] == "Red") {
 				new Red(imd, stoi(temp[i + 1]), stoi(temp[i + 2]), stoi(temp[i + 3]), stoi(temp[i + 4]));
+				std::cout<<"RED"<< std::endl;
 			}
 			if (temp[i] == "Threshold") {
 				new Threshold(imd, stoi(temp[i + 1]), stoi(temp[i + 2]), stoi(temp[i + 3]), stoi(temp[i + 4]));
+				std::cout<<"THRESHOLD"<< std::endl;
 			}
 			if (temp[i] == "Blur") {
 				new Blur(imd, stoi(temp[i + 1]), stoi(temp[i + 2]), stoi(temp[i + 3]), stoi(temp[i + 4]));
+				std::cout<<"BLUR"<< std::endl;
 			}
 			if (temp[i] == "Edge") {
 				new Edge(imd, stoi(temp[i + 1]), stoi(temp[i + 2]), stoi(temp[i + 3]), stoi(temp[i + 4]));
+				std::cout<<"BLUR"<< std::endl;
 			}
 			i += 5;
 		}
