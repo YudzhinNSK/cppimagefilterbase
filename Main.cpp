@@ -15,6 +15,7 @@ int main(int argc, char* argv[])
 	{
 		if (argc != 4)
 			throw "Not enough arguments";
+		std::cout << "I START WORK";
 		png_toolkit studTool;
 		studTool.load(argv[2]);
 		vector<vector<string>> conf = Config::readConfig(argv[1]);
