@@ -14,6 +14,7 @@ int main(int argc, char* argv[])
 	try
 	{
 		std::cout << "I START WORK";
+		return 1;
 		if (argc != 4)
 			throw "Not enough arguments";
 		png_toolkit studTool;
