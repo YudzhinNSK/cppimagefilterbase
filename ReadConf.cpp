@@ -2,7 +2,8 @@
 #include <fstream>
 #include <sstream>
 vector<vector<string>> Config::readConfig(string path) {
-	string Delimeter = " ";
+	//string Delimeter = " ";
+	//std::string ttt = path;
 	string str;
 	string num;
 	int i = 0;
@@ -11,7 +12,7 @@ vector<vector<string>> Config::readConfig(string path) {
 	ifstream inputData(path);
 	if (inputData.is_open()) {
 		while (getline(inputData, str)) {
-			stringstream ss(str);
+			istringstream ss(str);
 			while (ss) {
 				string s;
 				ss >> s;
