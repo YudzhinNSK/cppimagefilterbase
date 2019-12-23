@@ -17,11 +17,13 @@ png_toolkit::~png_toolkit()
 bool png_toolkit::load( const std::string &pictureName )
 {
     imgData.pixels = stbi_load(pictureName.c_str(), &imgData.w, &imgData.h, &imgData.compPerPixel, 0);
+	std::cout<<"I TRY LOAD PICTURE -> " << imgData.pixels != nullptr << std::endl;
     return imgData.pixels != nullptr;
 }
 
 bool png_toolkit::save( const std::string &pictureName )
 {
+	std::cout<<"I TRY SAVE PICTURE"<< std::endl;
     return stbi_write_png(pictureName.c_str(),
                    imgData.w, imgData.h,
                    imgData.compPerPixel,
