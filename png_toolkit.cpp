@@ -6,6 +6,8 @@
 #include "stb_image_write.h"
 #include "png_toolkit.h"
 
+using namespace std;
+
 png_toolkit::png_toolkit()
 {
 }
