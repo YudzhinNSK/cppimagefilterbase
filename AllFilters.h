@@ -2,6 +2,8 @@
 #include "FiltersFather.h"
 #include <algorithm>
 #include <cstring>
+#include <iostream>
+using namespace std;
 
 void FiltersFather::BW(image_data&, int u, int l, int b, int r) {
 	int curpix;
