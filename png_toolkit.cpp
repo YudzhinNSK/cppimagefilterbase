@@ -2,6 +2,7 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include <array>
 #include <string>
+#include <iostream>
 #include "stb_image_write.h"
 #include "png_toolkit.h"
 
