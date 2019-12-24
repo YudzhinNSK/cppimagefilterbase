@@ -1,19 +1,20 @@
 #include "ReadConf.h"
 #include <fstream>
-#include <sstream>
+#include<sstream>
+#include <string>
+#include <iostream>
+using namespace std;
 vector<vector<string>> Config::readConfig(string path) {
-	//string Delimeter = " ";
-	//std::string ttt = path;
+	string Delimeter = " ";
 	string str;
 	string num;
 	int i = 0;
 	vector<vector<string>> outData;
 	vector<string> FiltersData;
-	ifstream inputData(path);
+	std::ifstream inputData(path);
 	if (inputData.is_open()) {
-		std::cout<<"I CAN READ CONFIG"<<std::endl;
 		while (getline(inputData, str)) {
-			istringstream ss(str);
+			stringstream ss(str);
 			while (ss) {
 				string s;
 				ss >> s;

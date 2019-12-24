@@ -7,7 +7,7 @@ class FiltersFather {
 public:
 	image_data& imd;
 	int up = 0, lf = 0, bt = 0, rh = 0;
-	FiltersFather(image_data& imd, int u, int l, int b, int r) : imd(imd) {
+	FiltersFather(image_data& imd, int u, int l, int b, int r) : imd(imd){
 		if (u != 0) {
 			up = imd.h / u;
 		}
