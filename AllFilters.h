@@ -61,10 +61,10 @@ public:
 					for (int m = upp; m <= bottom; m++) {
 						for (int l = left; l <= right; l++) {
 							int cp;
-							if ((l < lf) || (l > rh)) {
+							if ((l < lf) || (l >= rh)) {
 								continue;
 							}
-							if ((m < up) || (m > bt)) {
+							if ((m < up) || (m >= bt)) {
 								continue;
 							}
 							cp = copy.compPerPixel * (m * copy.w + l);
@@ -107,7 +107,7 @@ public:
 				for (int m = upp; m <= bottom; m++) {
 					for (int l = left; l <= right; l++) {
 						int cp;
-						if ((m < up) || (m > bt) || (l < lf) || (l > rh)) {
+						if ((m < up) || (m >= bt) || (l < lf) || (l >= rh)) {
 							continue;
 						}
 						cp = copy.compPerPixel * (m * copy.w + l);
@@ -151,7 +151,7 @@ public:
 					for (int l = left; l <= right; l++) {
 						int cp;
 						place++;
-						if ((m < up) || (m > bt) || (l < lf) || (l > rh)) {
+						if ((m < up) || (m >= bt) || (l < lf) || (l >= rh)) {
 							continue;
 						}
 						cp = copy.compPerPixel * (m * copy.w + l);
