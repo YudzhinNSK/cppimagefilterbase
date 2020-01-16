@@ -64,7 +64,7 @@ void Threshold::applyfilter() {
 			for (int m = upp; m <= bottom; m++) {
 				for (int l = left; l <= right; l++) {
 					int cp;
-					if (!CheckBounds(m, l)) {
+					if (CheckBounds(m, l)) {
 						continue;
 					}
 					cp = copy.compPerPixel * (m * copy.w + l);
@@ -97,7 +97,7 @@ void Blur::applyfilter() {
 			for (int m = upp; m <= bottom; m++) {
 				for (int l = left; l <= right; l++) {
 					int cp;
-					if (!CheckBounds(m,l)) {
+					if (CheckBounds(m,l)) {
 						continue;
 					}
 					cp = copy.compPerPixel * (m * copy.w + l);
@@ -132,7 +132,7 @@ void Edge::applyfilter() {
 				for (int l = left; l <= right; l++) {
 					int cp;
 					place++;
-					if (!CheckBounds(m, l)) {
+					if (CheckBounds(m, l)) {
 						continue;
 					}
 					cp = copy.compPerPixel * (m * copy.w + l);

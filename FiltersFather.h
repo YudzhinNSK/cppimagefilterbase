@@ -38,6 +38,7 @@ public:
 	}
 	
 	bool CheckBounds(int x, int y) {
-		return ((x < up) || (x >= bt) || (y < lf) || (y >= rh));
+		bool m = ((x < up) || (x >= bt) || (y < lf) || (y >= rh));
+			return m;
 	}
 };
