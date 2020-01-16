@@ -38,9 +38,6 @@ public:
 	}
 	
 	bool CheckBounds(int x, int y) {
-		if ((x < up) || (x >= bt) || (y < lf) || (y >= rh))
-			return false;
-		else
-			return true;
+		return ((x < up) || (x >= bt) || (y < lf) || (y >= rh));
 	}
 };
