@@ -4,10 +4,11 @@
 #include "stb_image_write.h"
 
 class FiltersFather {
-public:
+protected:
 	image_data& imd;
 	int up = 0, lf = 0, bt = 0, rh = 0;
-	FiltersFather(image_data& imd, int u, int l, int b, int r) : imd(imd){
+public:
+	FiltersFather(image_data& imd, int u, int l, int b, int r) : imd(imd) {
 		if (u != 0) {
 			up = imd.h / u;
 		}
@@ -24,10 +25,22 @@ public:
 
 	void BW(image_data& imd, int u, int l, int b, int r);
 
-	bool ChechSpace(int x, int y) {
-		if ((x < lf) || (x > rh) || (y < bt) || (y > up)) {
-			return false;
+	image_data copy_picture(image_data& imd, int u, int l, int b, int r);
+
+	int CheckSum(int x) {
+		if (x > 255) {
+			x = 255;
 		}
-		return true;
+		if (x < 0) {
+			x = 0;
+		}
+		return x;
+	}
+	
+	bool CheckBounds(int x, int y) {
+		if ((x < up) || (x >= bt) || (y < lf) || (y >= rh))
+			return false;
+		else
+			return true;
 	}
 };

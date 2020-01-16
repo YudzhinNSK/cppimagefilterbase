@@ -1,11 +1,10 @@
-#include "ReadConf.h"
+#include "Config.h"
 #include <fstream>
 #include<sstream>
 #include <string>
 #include <iostream>
 using namespace std;
 vector<vector<string>> Config::readConfig(string path) {
-	string Delimeter = " ";
 	string str;
 	string num;
 	int i = 0;
